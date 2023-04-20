@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <title>Map With Markers</title>
+    <style>
+      #map {
+        width: 100%;
+        height: 98vh;
+      }
+
+      .main {
+        display: flex;
+      }
+      p{
+        font-weight:bold ;
+      }
+      ul {
+        list-style: none;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        line-height: 2rem;
+        cursor: pointer;
+        font-size: 1.3rem;
+        margin-left: -6vh;
+      }
+      @media screen and (max-width: 668px) {
+        .main {
+          display: block;
+        }
+        ul {
+          line-height: 0.9;
+          font-size: 1rem;
+        }
+        #map {
+          height: 65vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <span>
+        <p>Click at anyone and get its location</p>
+        <ul id="list"></ul>
+      </span>
+      <div id="map"></div>
+    </div>
+  </body>
+  <script src="./map.js">
+  </script>
+</html>
